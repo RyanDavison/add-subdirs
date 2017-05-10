@@ -1,0 +1,23 @@
+{
+  "name": "add-subdirs",
+  "version": "1.0.0",
+  "description": "Adds sub-directories to a user defined top level directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanDavison/add-subdirs.git"
+  },
+  "keywords": [
+    "directory"
+  ],
+  "author": "Ryan Davison",
+  "license": "MIT",
+  "dependencies": {
+    "chai-files": "^1.4.0",
+    "chai-fs": "^1.0.0",
+    "fs-extra": "^3.0.1"
+  }
+}
