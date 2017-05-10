@@ -3,6 +3,7 @@ const path = require('path');
 const createDirs = require('../index.js');
 const chai = require('chai');
 const expect = chai.expect;
+const assert = chai.assert;
 var chaiFiles = require('chai-files');
 chai.use(chaiFiles)
 const dir = chaiFiles.dir;
