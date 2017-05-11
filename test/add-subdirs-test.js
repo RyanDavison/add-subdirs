@@ -43,9 +43,19 @@ describe('When given illegitimate argument values, add-subdirs() returns an erro
 
     it('It should return an error if the second argument is a negative number', function(){
         expect(createDirs(dirPath, -3, 'test')).to.be.an('error');
+        expect(createDirs(dirPath, -3, 'test')).to.deep.equal(new Error (`add-subdirs(): Second argument must be a number greater than zero`));
     });
 
     it('It should return an error if the third argument is not a string', function(){
         expect(createDirs(dirPath, 3, {})).to.be.an('error');
+        expect(createDirs(dirPath, -3, 'test')).to.deep.equal(new Error (`add-subdirs(): Third argument must be a string`));
+    });
+
+    it('It should return a specific error if the second argument is a negative number', function(){
+        expect(createDirs(dirPath, -3, 'test')).to.deep.equal(new Error (`add-subdirs(): Second argument must be a number greater than zero`));
+    });
+
+    it('It should return a specific error if the third argument is not a string', function(){
+        expect(createDirs(dirPath, -3, 'test')).to.deep.equal(new Error (`add-subdirs(): Third argument must be a string`));
     });
 });
