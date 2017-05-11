@@ -9,18 +9,13 @@ chai.use(chaiFiles)
 const dir = chaiFiles.dir;
 
 const dirPath = './test/tree';
-const newDir = 'subdir_0';
-let dirs;
-let dirsNeg;
-
-before(function(done){
-    fs.removeSync(`${dirPath}`);
-    fs.ensureDirSync(`${dirPath}`);
-    dirs = createDirs(dirPath, 3, 'test');
-    done();
-});
 
 describe('add-subdirs', function() {
+    let dirs;
+    before(function(){
+        fs.emptyDirSync(`${dirPath}`)
+        dirs = createDirs(dirPath, 3, 'test');
+    });
 
     it(`should return an array`, function(){
         expect(dirs).to.be.an('array');
@@ -31,7 +26,6 @@ describe('add-subdirs', function() {
         expect(dirs.length).to.equal(3);
     });
 
-
     it(`creates a series of sub-diretories in a user-supplied directory`,
         function(){
             expect(dir(dirPath)).to.exist;
@@ -39,4 +33,19 @@ describe('add-subdirs', function() {
         }
     );
 
+});
+
+describe('When given illegitimate argument values, add-subdirs() returns an error', function(){
+
+    beforeEach(function(){
+        fs.emptyDirSync(`${dirPath}`);
+    });
+
+    it('It should return an error if the second argument is a negative number', function(){
+        expect(createDirs(dirPath, -3, 'test')).to.be.an('error');
+    });
+
+    it('It should return an error if the third argument is not a string', function(){
+        expect(createDirs(dirPath, 3, {})).to.be.an('error');
+    });
 });
