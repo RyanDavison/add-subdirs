@@ -16,8 +16,10 @@
   "author": "Ryan Davison",
   "license": "MIT",
   "dependencies": {
-    "chai-files": "^1.4.0",
-    "chai-fs": "^1.0.0",
     "fs-extra": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-files": "^1.4.0"
   }
 }
