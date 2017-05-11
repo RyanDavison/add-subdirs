@@ -1,6 +1,6 @@
 {
   "name": "add-subdirs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds sub-directories to a user defined top level directory",
   "main": "index.js",
   "scripts": {
