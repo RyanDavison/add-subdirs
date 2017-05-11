@@ -40,7 +40,7 @@ Default: 1
 The number of subdirectories you want to add.
 
 ---
-**name**
+**name** (optional)
 
 Type: `string`
 
