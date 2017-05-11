@@ -23,16 +23,14 @@ const dirs = addSubdirs('/path/to/directory');
 
 **addSubdirs(dirpath[, num][, name])**
 
-
+***
 **dirpath** (required)
 
 Type: `string`
 
 The directory path you want to add your sub-directories to.
 
-
-
-
+---
 **num** (optional)
 
 Type: `number`
@@ -41,9 +39,7 @@ Default: 1
 
 The number of subdirectories you want to add.
 
-
-
-
+---
 **name**
 
 Type: `string`
@@ -54,9 +50,7 @@ The name of your sub-directories. An underscore character and a number
 
 will be appended to the end of the name to make it unique.
 
-
-
-
+---
 ## License
 
 MIT
