@@ -4,7 +4,7 @@
   "description": "Adds sub-directories to a user defined top level directory",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test/add-subdirs-test.js"
   },
   "repository": {
     "type": "git",
