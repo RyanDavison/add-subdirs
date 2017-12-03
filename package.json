@@ -4,7 +4,7 @@
   "description": "Adds sub-directories to a user defined top level directory",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./test/"
   },
   "repository": {
     "type": "git",
